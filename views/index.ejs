@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure File Sharing Platform</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script defer src="/script.js"></script>
+</head>
+<body>
+
+    <!-- Sidebar with Features -->
+<div class="sidebar">
+    <h2>Features</h2>
+    <button onclick="navigateTo('/userToUser')">User to User</button>
+    <button onclick="navigateTo('/oneTimeLink')">One-Time Link</button>
+    <button onclick="navigateTo('/steganography')">Steganography</button>
+</div>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <span id="userDisplay"></span>
+        <span id="userIdDisplay"></span> <!-- Display User ID -->
+        <button id="signupBtn" onclick="window.location.href='/signup'">Sign Up</button>
+        <button id="signinBtn" onclick="window.location.href='/signin'">Sign In</button>
+        <button id="logoutBtn" onclick="logout()" style="display: none;">Logout</button>
+    </nav>
+
+    <div class="container" id="upload">
+        <h1>Secure File Sharing Platform</h1>
+
+        <div class="upload-section">
+            <form id="uploadForm" enctype="multipart/form-data">
+                <input type="file" name="file" id="fileInput" required>
+                <button type="submit">Upload File</button>
+            </form>
+            <p id="uploadMessage"></p>
+        </div>
+
+      
+
+        <div class="user-files">
+            <h2>My Uploaded Files</h2>
+            <ul id="fileList"></ul>
+        </div>
+
+        <div id="log"></div>
+    </div>
+
+    <div id="main-content"></div>
+
+  
+ 
+</body>
+</html>

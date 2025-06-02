@@ -1,0 +1,197 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    flex-direction: column;
+    margin: 0;
+    padding: 20px;
+   background: url(/images/smoke.jpg);
+   background-position: center;
+   background-size: cover;
+   
+}
+
+#login-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 35px 35px 0 15px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2px);
+    text-align: center;
+    width: 350px;
+    animation: fadeIn 0.8s ease-in-out;
+   
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgb(125, 118, 118);
+    -webkit-text-stroke: .8px black;
+    
+}
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 81%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: center;
+    width: 400px;
+    color: #fff;
+   
+}
+.grid {
+    position: relative;
+    margin: auto;
+    width: fit-content;
+}
+.box {
+    width: 35px;
+    height: 35px;
+    background: lightgray;
+    cursor: pointer;
+    position: absolute;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+.box.selected {
+    background:#1a3d53 !important;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    border: rgb(255, 255, 255) .5px solid;
+}
+.box.hidden {
+    display: none;
+}
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background: blue;
+    color: white;
+    border-radius: 5px;
+    
+}
+
+#register-btn{
+    margin-left: 9px;
+    color: #8fbdd6;
+    font-weight: 550;
+    backdrop-filter: blur(10px);
+    
+    font-size: 18px;
+}
+#register-btn:hover{
+    
+    color: #ffffff;
+    background-color:#8fbdd6;
+    border: #f4f4f4 .5px solid;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    
+}
+
+input, select, button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.2);
+    color: rgb(117, 111, 111);
+    font-weight: 500;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(15px);
+   
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+input::placeholder {
+    color: rgb(117, 111, 111);
+   
+    
+    font-weight: 500;
+}
+
+input:focus, select:focus {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+@keyframes fadeInBox {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.box {
+    opacity: 0; /* Initially hidden */
+    animation: fadeInBox 0.3s ease-in-out forwards;
+}
+
+
+#done-btn{
+    color: #8fbdd6;
+    font-weight: 550;
+    background-color: #f4f4f4;
+    font-size: 18px;
+    
+}
+#done-btn:hover{
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    background-color:#8fbdd6;
+    border: #f4f4f4 .5px solid;
+}
+
+#register-btn{
+    margin-left: 9px;
+    color: #8fbdd6;
+    font-weight: 550;
+    backdrop-filter: blur(10px);
+    
+    font-size: 18px;
+}
+#register-btn:hover{
+    
+    color: #ffffff;
+    background-color:#8fbdd6;
+    border: #f4f4f4 .5px solid;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    
+}
+
+#name{
+    position: absolute;
+    top:40%;
+    left: 0;
+    width: 450px;
+    border: #1a3d53 1px solid;
+
+}
+#name h3{
+    color: #f4f4f4;
+    margin-left: 25px;
+
+}
+#name ul li{
+    color: #f4f4f4;
+}

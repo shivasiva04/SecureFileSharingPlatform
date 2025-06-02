@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Password Registration</title>
+    <link rel="stylesheet" href="/signup.css">
+</head>
+<body id="body">
+    <div id="login-form">
+        <h2>Register</h2>
+        <form action="/signup" method="POST" onsubmit="return handleFormSubmit(event)">
+            <input type="text" name="username" id="username" placeholder="Enter your name" required>
+            <input type="email" name="email" id="email" placeholder="Enter your email" required>
+            <input type="number" name="gridSize" id="gridSize" placeholder="Enter grid size (2-10)" min="2" max="10" required>
+            <select name="gridShape" id="gridShape" required>
+                <option value="square">Square Grid</option>
+                <option value="circle">Circular Grid</option>
+                <option value="triangle">Triangle Grid</option>
+            </select>
+            <input type="hidden" name="pattern" id="pattern">
+            <input type="password" name="password" id="password" placeholder="Click to set password" onclick="showGridPopup()" readonly required>
+<!--             <button type="submit" id="register-btn">Register</button> -->
+        </form>
+        <p id="passwordOutput"></p>
+    </div>
+    
+    <div class="popup-container" id="popup">
+        <h3>Select Password Pattern</h3>
+        <div class="grid" id="gridContainer"></div>
+        <button onclick="registerPassword()" id="register-btn">Register</button>
+    </div>
+
+
+
+
+
+
+    <script src="/signup.js"></script>
+</body>
+</html>
